@@ -1,0 +1,4 @@
+OS info is 
+uname_result(system='Windows', node='Admin-VAIO', release='7', version='6.1.7601', machine='AMD64', processor='Intel64 Family 6 Model 58 Stepping 9, GenuineIntel')
+
+Python version is 3.8.0 (tags/v3.8.0:fa919fd, Oct 14 2019, 19:21:23) [MSC v.1916 32 bit (Intel)] ('32bit', 'WindowsPE')
