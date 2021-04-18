@@ -43,4 +43,28 @@
 # Это пример применения SOLID принципа (см https://goo.gl/GFMoaI) в архитектуре программ.
 # Точнее, в этом случае важен принцип единственной ответственности - https://goo.gl/rYb3hT
 
-# TODO здесь ваш код...
+from mastermind_engine import new_numeric, check_numeric
+
+num_period = 4
+
+while True:
+    new_numeric(num_period)
+    print('Загаданно', num_period, '- значное число.')
+    attempt = 1
+    while True:
+        user_num = (input('Введите Ваше число:'))
+        result = check_numeric(users_numeric=user_num)
+        if result['bulls'] == num_period:
+            print('Поздравляю! Вы угадали, за', attempt, 'попыток.')
+            break
+        if result['error_code'] != 0:
+            print('Нужно ввести', num_period, 'не повторяющихся цифры.')
+        else:
+            print('быки - ', result['bulls'], ',', 'коровы - ', result['cows'])
+            attempt += 1
+
+    one_more_time = input('Для повторной игры, нажмите любую клавишу, для выхода "N".')
+    if one_more_time == 'N' or one_more_time == 'n':
+        print('Всего доброго!')
+        break
+
